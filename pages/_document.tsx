@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Html, Head, Main, NextScript, DocumentProps } from 'next/document';
 import i18nextConfig from '../next-i18next.config';
 
@@ -17,6 +18,7 @@ export default function Document(props: Props) {
       <body>
         <Main />
         <NextScript />
+        <Analytics />
       </body>
     </Html>
   );
