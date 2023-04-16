@@ -1,6 +1,7 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Toaster } from 'react-hot-toast';
 import { QueryClient, QueryClientProvider } from 'react-query';
-
+import '@/styles/globals.css';
 import { appWithTranslation } from 'next-i18next';
 import type { AppProps } from 'next/app';
 import { Inter } from 'next/font/google';
@@ -14,6 +15,7 @@ function App({ Component, pageProps }: AppProps<{}>) {
 
   return (
     <div className={inter.className}>
+      <Analytics />
       <Toaster />
       <QueryClientProvider client={queryClient}>
         <Component {...pageProps} />
